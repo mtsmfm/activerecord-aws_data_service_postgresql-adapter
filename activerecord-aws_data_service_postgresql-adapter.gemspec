@@ -33,6 +33,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "activerecord", [">= 6.0.0"]
+  # Same as ActiveRecord
+  spec.add_runtime_dependency "pg", [">= 0.18", "< 2.0"]
+  spec.add_runtime_dependency "aws-sdk-rdsdataservice", [">= 1.10.0"]
+
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"

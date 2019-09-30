@@ -1,5 +1,7 @@
 require "bundler/setup"
-require "app"
+Bundler.require
+
+ENV["DATABASE_URL"] = "aws-data-service-postgresql:///?secret_arn=arn:aws:secretsmanager:xxxxx:xxxxx:secret:xxxxx&resource_arn=arn:aws:rds:xxxxx:xxxxx:cluster:xxxxx"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
