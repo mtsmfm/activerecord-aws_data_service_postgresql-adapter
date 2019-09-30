@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    command: sleep infinity
+    volumes:
+      - ..:/original:cached
+      - app:/app
+      - ../.devcontainer:/app/.devcontainer:cached
+      - home:/home/app
+      - ~/.gitconfig:/home/app/.gitconfig:ro
+      - ~/.zshrc:/home/app/.zshrc:ro
+      - ~/.netrc:/home/app/.netrc:ro
+      - ~/.gem:/home/app/.gem:ro
+      - ~/.gem:/home/app/.gem/ruby
+      - ~/.gem:/home/app/.gem/specs
+    env_file:
+      - app.env
+volumes:
+  app:
+  home:
