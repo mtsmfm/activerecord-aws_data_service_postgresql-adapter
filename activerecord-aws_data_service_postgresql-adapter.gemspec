@@ -1,27 +1,24 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "app/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "app"
-  spec.version       = App::VERSION
+  spec.name          = "activerecord-aws_data_service_postgresql-adapter"
+  spec.version       = "0.1.0"
   spec.authors       = ["Fumiaki MATSUSHIMA"]
   spec.email         = ["mtsmfm@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{}
+  spec.description   = %q{}
+  spec.homepage      = "https://github.com/mtsmfm/activerecord-aws_data_service_postgresql-adapter"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/mtsmfm/activerecord-aws_data_service_postgresql-adapter"
+    spec.metadata["changelog_uri"] = "https://github.com/mtsmfm/activerecord-aws_data_service_postgresql-adapter"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
